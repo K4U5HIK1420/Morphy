@@ -6,14 +6,16 @@ tokens = (
     'LPAREN', 'RPAREN', 'LBRACE', 'RBRACE', 'SEMICOLON',
     'GT', 'LT', 'GE', 'LE', 'EQ', 'NE',
     'AND', 'OR', 'NOT',
-    'VAR', 'PRINT', 'IF'
+    'VAR', 'PRINT', 'IF', 'TRUE', 'FALSE'  # ✅ Added TRUE and FALSE tokens
 )
 
 # Reserved words
 reserved = {
     'var': 'VAR',
     'print': 'PRINT',
-    'if': 'IF'
+    'if': 'IF',
+    'true': 'TRUE',    # ✅ Define true
+    'false': 'FALSE'   # ✅ Define false
 }
 
 # Regular expressions for tokens
@@ -40,6 +42,17 @@ t_NE       = r'!='
 t_AND      = r'&&'
 t_OR       = r'\|\|'
 t_NOT      = r'!'
+
+# Boolean literals
+def t_TRUE(t):
+    r'true'
+    t.value = True
+    return t
+
+def t_FALSE(t):
+    r'false'
+    t.value = False
+    return t
 
 # String handling
 def t_STRING(t):
