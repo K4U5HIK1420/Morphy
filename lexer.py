@@ -82,7 +82,7 @@ def t_newline(t):
 
 # Error handling
 def t_error(t):
-    print(f"Illegal character '{t.value[0]}'")
+    print(f"Illegal character {t.value[0]}")
     t.lexer.skip(1)
 
 # Build the lexer
