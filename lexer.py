@@ -6,7 +6,7 @@ tokens = (
     'LPAREN', 'RPAREN', 'LBRACE', 'RBRACE', 'SEMICOLON',
     'GT', 'LT', 'GE', 'LE', 'EQ', 'NE',
     'AND', 'OR', 'NOT',
-    'VAR', 'PRINT', 'IF', 'TRUE', 'FALSE'  # ✅ Added TRUE and FALSE tokens
+    'VAR', 'PRINT', 'IF','ELSE', 'TRUE', 'FALSE'  # ✅ Added TRUE and FALSE tokens
 )
 
 # Reserved words
@@ -14,6 +14,7 @@ reserved = {
     'var': 'VAR',
     'print': 'PRINT',
     'if': 'IF',
+    'else':'ELSE',
     'true': 'TRUE',    # ✅ Define true
     'false': 'FALSE'   # ✅ Define false
 }
